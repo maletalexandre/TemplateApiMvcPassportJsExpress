@@ -17,12 +17,12 @@
     border: 1px solid white;
     box-shadow: 0 0 20px white ;
 
-    padding: 50px 40px;
+    padding: 50px;
     border-radius: 100%;
 }
 
 .text {
     color: white;
-    position: relative;
+    position: absolute;
 }
 
