@@ -10,27 +10,7 @@ export default function Form() {
   var HandleChange = (e) => {
     const { name, value } = e.currentTarget;
 
-    setUserInfos((prev) => {
-      if (name === "email") {
-        return {
-          email: value,
-          about: prev.about,
-          password: prev.password,
-        };
-      } else if (name === "password") {
-        return {
-          email: prev.email,
-          password: value,
-          about: prev.about,
-        };
-      } else if (name === "about") {
-        return {
-          email: prev.email,
-          password: prev.password,
-          about: value,
-        };
-      }
-    });
+    setUserInfos((prev) => ({...prev, [name]: value}));
   };
 
   return (
